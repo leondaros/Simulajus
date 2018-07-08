@@ -1,0 +1,33 @@
+<div class="form-group">
+	<% if @answer.errors.any? %>
+	<div class="alert alert-danger" role="alert">
+		<h3>The following errors occurred</h3>
+		<ul>
+		  	<% @answer.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		</ul>
+	</div>
+	<% end %>
+	<%= simple_form_for @answer do |f| %>
+	  <div class="field form-group">
+	    <%= f.input :lawsuit_type, prompt: 'Selecione uma opção', collection: [ 'Condenatória', 'Executiva', 'Mandamental', 'Declaratória', 'Constitutiva'], class:"form-control"%>
+	  </div>
+	  <div class="field form-group">
+	    <%= f.input :evidence, prompt: 'Selecione uma opção',
+	      collection: [ 'RESERVA DE VÔO;', 'COMPROVANTE DE EMBARQUE',
+	                    'INSCRIÇÃO NO EVENTO DE INOVAÇÃO',
+	                    'COMPROVANTE DE RESERVA NO HOTEL TANGO',
+	                    'FOTOS TURÍSTICO', 'COMPROVANTES DE GASTOS NA VIAGEM'], class:"form-control"%>
+	  </div>
+	  <div class="field form-group">
+	    <%= f.input :addressing_type, prompt: 'Selecione uma opção',
+	      collection: ['Vara Única da Comarca de Bom Retiro/SC.',
+	                   'Juizado Especial Cível da comarca de Florianópolis/SC',
+	                   'Juizado Especial Cível da comarca de Curitiba/PR'], class:"form-control"%>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit "Responder", class: "btn btn-primary"%>
+	  </div>
+	<% end %>
+</div>

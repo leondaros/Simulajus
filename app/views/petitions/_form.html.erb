@@ -1,0 +1,30 @@
+
+<div class="form-group">
+	<% if @petition.errors.any? %>
+	<div class="alert alert-danger" role="alert">
+		<h3>The following errors occurred</h3>
+		<ul>
+		  	<% @petition.errors.full_messages.each do |msg| %>
+		      <li><%= msg %></li>
+		    <% end %>
+		</ul>
+	</div>
+	<% end %>
+<%= simple_form_for @petition do |f| %>
+  <div class="field form-group">
+    <%= f.input :history, as: :text , input_html: {rows: '6'},class:"form-control"%>
+  </div>
+  <div class="field form-group">
+    <%= f.input :pedido, as: :text, input_html: {rows: '6'},class:"form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.input :facts, as: :text, input_html: {rows: '6'},class:"form-control"%>
+  </div>
+  <div class="field form-group">
+    <%= f.input :justification, as: :text, input_html: {rows: '6'},class:"form-control"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Proximo", class: "btn btn-primary"%>
+  </div>
+<% end %>
+</div>

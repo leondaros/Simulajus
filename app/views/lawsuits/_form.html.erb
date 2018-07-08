@@ -1,0 +1,14 @@
+<%= simple_form_for @lawsuit do |f| %>
+  <div class="field form-group">
+    <%= f.input :description ,class:"form-control"%>
+  </div>
+  <div class="field form-group">
+    <%= f.input :justification, class:"form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.input :win, as: :boolean, checked_value: true, unchecked_value: false, class:"form-control"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Proximo", class: "btn btn-primary"%>
+  </div>
+<% end %>

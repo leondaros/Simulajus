@@ -1,0 +1,21 @@
+<%= simple_form_for @answer do |f| %>
+  <div class="field form-group">
+    <%= f.input :lawsuit_type, collection: [ 'Condenatória', 'Executiva', 'Mandamental', 'Declaratória', 'Constitutiva'], class:"form-control"%>
+  </div>
+  <div class="field form-group">
+    <%= f.input :evidence,
+      collection: [ 'RESERVA DE VÔO;', 'COMPROVANTE DE EMBARQUE',
+                    'INSCRIÇÃO NO EVENTO DE INOVAÇÃO',
+                    'COMPROVANTE DE RESERVA NO HOTEL TANGO',
+                    'FOTOS TURÍSTICO', 'COMPROVANTES DE GASTOS NA VIAGEM'], class:"form-control"%>
+  </div>
+  <div class="field form-group">
+    <%= f.input :addressing_type,
+      collection: ['Vara Única da Comarca de Bom Retiro/SC.',
+                   'Juizado Especial Cível da comarca de Florianópolis/SC',
+                   'Juizado Especial Cível da comarca de Curitiba/PR'], class:"form-control"%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Responder", class: "btn btn-primary"%>
+  </div>
+<% end %>
