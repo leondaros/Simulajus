@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+O SimulaJus é uma plataforma online de prática jurídica simulada, voltada para a modernização do ensino jurídico. Por meio da gamificação e do protagonismo do aluno, fornecemos a oportunidade perfeita para que as faculdades de direito acompanhem a evolução das tecnologias educacionais.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+O simulador permite ao aluno atuar como advogado e juiz num processo, podendo vivenciar a prática do direito sem sair da sala de aula. Além disso, alia os anseios dos professores, dos alunos e das instituições de ensino.
+O SimulaJus irá revolucionar a forma de ensinar e estudar direito.
